@@ -272,6 +272,52 @@
             box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
         }
 
+        /* About Section */
+        #about {
+            background-color: var(--bg-white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-text ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .about-text li {
+            padding: 0.8rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--text-light);
+            font-weight: 500;
+            line-height: 1.7;
+        }
+
+        .about-text li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -295,6 +341,10 @@
             .btn {
                 width: 100%;
                 max-width: 300px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
             }
 
             .section-heading {
@@ -361,6 +411,26 @@
                     <a href="https://github.com" target="_blank" class="btn btn-primary">View GitHub</a>
                     <a href="Cv28thJanuary.pdf" download class="btn btn-secondary">Download CV</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-heading">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Professional Profile</h3>
+                    <ul>
+                        <li>Final-year B.Sc. (Hons) Software Development student at Atlantic Technological University</li>
+                        <li>Experienced in full-stack development with Java, C#, Python, and modern web technologies</li>
+                        <li>Specialized in Progressive Web Apps and user-centered system design</li>
+                        <li>Strong background in analytical problem-solving and collaborative Agile workflows</li>
+                        <li>Passionate about building practical applications that improve user experience and operational efficiency</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div style="width: 250px; height: 250px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; margin: 0 auto;">💻</div>
                 </div>
             </div>
         </section>
