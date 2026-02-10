@@ -318,6 +318,103 @@
             text-align: center;
         }
 
+        /* Skills Section */
+        #skills {
+            background-color: var(--bg-light);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-card {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(59, 43, 31, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--accent-brown-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), var(--success-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-card h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .strengths-section {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(59, 43, 31, 0.12);
+            border: 1px solid var(--accent-brown-light);
+        }
+
+        .strengths-section h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .strength-item {
+            background: linear-gradient(135deg, #fff7ef 0%, #f3e7dc 100%);
+            padding: 1.2rem;
+            border-radius: 8px;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(59, 43, 31, 0.25);
+        }
+
+        .strength-item:hover {
+            background: linear-gradient(135deg, var(--accent-color), #1d4ed8);
+            color: var(--bg-white);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -344,6 +441,10 @@
             }
 
             .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
                 grid-template-columns: 1fr;
             }
 
@@ -431,6 +532,51 @@
                 </div>
                 <div class="about-image">
                     <div style="width: 250px; height: 250px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; margin: 0 auto;">💻</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h4>Programming Languages</h4>
+                    <p>Java, C#, Python, JavaScript, SQL</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Frontend Development</h4>
+                    <p>Angular, HTML, CSS/SCSS, Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Backend Development</h4>
+                    <p>Node.js, Object-Oriented Design, Full-Stack Development</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Databases</h4>
+                    <p>SQL, Relational Database Design</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Development Methodologies</h4>
+                    <p>Agile, Software Testing, Iterative Development</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Tools & Platforms</h4>
+                    <p>Git, GitHub, Progressive Web Apps</p>
+                </div>
+            </div>
+
+            <div class="strengths-section">
+                <h3>Core Competencies</h3>
+                <div class="strengths-grid">
+                    <div class="strength-item">Full-Stack Development</div>
+                    <div class="strength-item">Progressive Web Apps</div>
+                    <div class="strength-item">User-Centered Design</div>
+                    <div class="strength-item">Database Architecture</div>
+                    <div class="strength-item">Problem Solving</div>
+                    <div class="strength-item">Agile Collaboration</div>
+                    <div class="strength-item">Performance Tracking</div>
+                    <div class="strength-item">Technical Communication</div>
                 </div>
             </div>
         </section>
