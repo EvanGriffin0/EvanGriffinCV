@@ -544,6 +544,86 @@
             margin-top: 2rem;
         }
 
+        /* Experience Section */
+        #experience {
+            background-color: var(--bg-light);
+        }
+
+        .experiences {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-item {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 8px rgba(59, 43, 31, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--accent-brown-light);
+            border-left: 4px solid var(--accent-color);
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--accent-color), var(--success-color));
+            border-radius: 10px 0 0 10px;
+        }
+
+        .experience-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-header {
+            margin-bottom: 1rem;
+        }
+
+        .experience-role {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-company {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .experience-date {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 0.3rem;
+        }
+
+        .experience-details {
+            list-style: none;
+        }
+
+        .experience-details li {
+            color: var(--text-light);
+            padding: 0.6rem 0 0.6rem 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .experience-details li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -777,6 +857,64 @@
 
             <div class="more-projects">
                 <p style="color: var(--text-light); margin-bottom: 1rem;">Plus additional academic projects involving Java, C#, SQL database design, and web applications</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-heading">Experience</h2>
+            <div class="experiences">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-role">Bartender</div>
+                        <div class="experience-company">Porterhouse Bar & Restaurant, Galway</div>
+                        <div class="experience-date">March 2025 – Present</div>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Developed strong teamwork and adaptability in fast-paced service environments</li>
+                        <li>Maintained high service standards while coordinating effectively within a team</li>
+                        <li>Handled customer interactions professionally and efficiently</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-role">Pastry Chef & Kitchen Assistant</div>
+                        <div class="experience-company">Gran Grans Foods Ltd., Galway</div>
+                        <div class="experience-date">June 2024 – March 2025</div>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Supported operational efficiency and maintained quality standards in a high-output environment</li>
+                        <li>Demonstrated reliability, organisation, and attention to detail</li>
+                        <li>Worked collaboratively with kitchen team to meet production schedules</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-role">Technical Support Representative</div>
+                        <div class="experience-company">Apple (Remote)</div>
+                        <div class="experience-date">June 2023 – December 2023</div>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Diagnosed and resolved hardware and software issues across iOS and macOS systems</li>
+                        <li>Provided structured, step-by-step troubleshooting guidance to customers</li>
+                        <li>Maintained high customer satisfaction through clear and professional communication</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-role">Work-Shadowing Experience</div>
+                        <div class="experience-company">Hewlett Packard Enterprise (HPE), Galway</div>
+                        <div class="experience-date">2019</div>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Observed Agile workflows and enterprise software development practices</li>
+                        <li>Gained early insight into professional engineering environments</li>
+                        <li>Learned industry best practices in software development</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
