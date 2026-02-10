@@ -415,6 +415,135 @@
             box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
         }
 
+        /* Projects Section */
+        #projects {
+            background-color: var(--bg-white);
+        }
+
+        .projects-container {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .project-card {
+            background-color: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(59, 43, 31, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--accent-brown-light);
+        }
+
+        .project-card:hover {
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--accent-color), #667eea);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-white);
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent);
+            pointer-events: none;
+        }
+
+        .project-content {
+            padding: 2.5rem;
+            background-color: var(--bg-white);
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-features {
+            background: linear-gradient(135deg, #fffaf5, #f4ede4);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--accent-brown-light);
+        }
+
+        .project-features h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .project-features ul {
+            list-style: none;
+            column-count: 2;
+            gap: 1rem;
+        }
+
+        .project-features li {
+            color: var(--text-light);
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .project-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .project-focus {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .project-focus strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .more-projects {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -446,6 +575,10 @@
 
             .skills-container {
                 grid-template-columns: 1fr;
+            }
+
+            .project-features ul {
+                column-count: 1;
             }
 
             .section-heading {
@@ -578,6 +711,72 @@
                     <div class="strength-item">Performance Tracking</div>
                     <div class="strength-item">Technical Communication</div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-heading">Featured Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Blood Bikes West – Progressive Web App</h3>
+                        <p class="project-subtitle">Final Year Project | 2025–Present</p>
+                        <p class="project-description">
+                            Designing and developing a Progressive Web Application to enhance volunteer coordination and trip management for a medical transport charity. Building a cross-platform PWA accessible on iOS, Android, and web.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Volunteer coordination system</li>
+                                <li>Trip management and scheduling</li>
+                                <li>Cross-platform PWA architecture</li>
+                                <li>Operational efficiency optimization</li>
+                                <li>Responsive UI/UX design</li>
+                                <li>Scalable data handling</li>
+                            </ul>
+                        </div>
+                        <p class="project-focus">
+                            <strong>Focus:</strong> Full-stack development, Progressive Web Apps, user accessibility, iterative Agile practices
+                        </p>
+                        <div class="button-group">
+                            <a href="#contact" class="btn btn-primary">View More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🏍️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">TuneUp (MotoSafe) – Performance Tracking</h3>
+                        <p class="project-subtitle">Academic Project | 2025</p>
+                        <p class="project-description">
+                            Developed a safety-focused web application to monitor and analyse rider performance metrics and promote safer group riding. Implemented comprehensive performance tracking including acceleration, braking, lean angle, and G-force measurement.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Performance metric tracking</li>
+                                <li>Acceleration and braking analytics</li>
+                                <li>Lean angle monitoring</li>
+                                <li>G-force measurement</li>
+                                <li>Community ride scheduling</li>
+                                <li>Responsive cross-device design</li>
+                            </ul>
+                        </div>
+                        <p class="project-focus">
+                            <strong>Tech Stack:</strong> Angular, TypeScript, HTML/SCSS, Node.js
+                        </p>
+                        <div class="button-group">
+                            <a href="#contact" class="btn btn-primary">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more-projects">
+                <p style="color: var(--text-light); margin-bottom: 1rem;">Plus additional academic projects involving Java, C#, SQL database design, and web applications</p>
             </div>
         </section>
     </main>
